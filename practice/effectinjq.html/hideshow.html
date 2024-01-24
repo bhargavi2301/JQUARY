@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hide and show</title>
+    <style>
+        .box{
+            width: 31%;
+            height: 279px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+    <img src="../../image/sunset-beach-girl-.webp" alt="">
+    </div>
+     <button class="hide">Hide</button>
+     <button class="show">Show</button>
+     <button class="Toggle">Toggle</button>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    $(document).ready(function(){
+        $(".hide").click(function(){
+            $(".box").hide();
+        })
+        $(".show").click(function(){
+            $(".box").show();
+        })
+        $(".Toggle").click(function(){
+            $(".box").toggle();
+        })
+    })
+</script>
+    </body>
+</html>
