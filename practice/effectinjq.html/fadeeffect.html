@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fade effect in jq</title>
+    <style>
+        .box1{
+            width: 30%;
+            height: 300px;
+            /* background-color: black; */
+            color: white;
+            border: 2px solid blue;
+            background: url(../../image/istockphoto-538449165-612x612.jpg)no-repeat;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <button class="fadein">fade in</button>
+        <button class="fadeout">fade out</button>
+        <button class="toggle">fade toggle</button>
+        <button class="fadeto">fade to</button>
+    </div>
+    <hr>
+    <div class="box1">box</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+      $(document).ready(function(){
+       $ (".fadein").click(function(){
+            $('.box1').fadeIn(5000)
+        })
+        $ (".fadeout").click(function(){
+            $('.box1').fadeOut(5000)
+        })
+        $ (".toggle").click(function(){
+            $('.box1').toggle(2000)
+        })
+        $ (".fadeto").click(function(){
+            $('.box1').fadeTo(3000,0.2)
+        })
+      })
+
+      
+    </script>
+</body>
+
+</html>

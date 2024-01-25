@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slide in jq</title>
+    <style>
+        .boxes{
+            align-items: center;
+            padding-left: 40%;
+        } 
+        .box1{
+            width: 30%;
+            height: 200px;
+            border: 2px solid black;
+            margin-left: 40%;
+            background-color: rgb(184, 117, 246);
+        }
+    </style>
+</head>
+
+<body>
+<div class="boxes">
+    <h1>slides in Jquery</h1>
+    <div class="box">
+        <button class="up">slide up</button>
+        <button class="down">slide down</button>
+        <button class="toggle">slide Toggle</button>
+    </div><br><br>
+    <!-- <img src="../../image/images.jpg" alt=""> -->
+    </div>
+    <div class="box1">box</div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <script>
+            $("button").css({
+                backgroundcolor:"yellow",
+                color:"black",
+                border:"none",
+                borderradious:"3px"
+            })
+        </script>
+<script>
+    $(document).ready(function(){
+        $(".up").click(function(){
+            $(".box1").slideUp()
+        });
+        $(".down").click(function(){
+            $(".box1").slideDown()
+        });
+        $(".toggle").click(function(){
+            $(".box1").toggle()
+        });
+    });
+</script>
+</body>
+
+</html>
