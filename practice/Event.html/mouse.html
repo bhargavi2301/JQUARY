@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mouse event in jquery</title>
+    <style>
+        .box {
+            width: 30%;
+            height: 200px;
+            border: 2px solid black;
+            border-radius: 5px;
+            background: url(../../image/photo-1575936123452-b67c3203c357.avif)no-repeat center center/cover;
+        }
+        .mouse{
+            margin-left: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mouse">
+        <h1>Mouse Event in jquery</h1>
+        <div class="box"></div>
+    </div>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+
+        // mouseenter event
+        $(".box").mouseenter(function () {
+            $("body").css({ backgroundColor: "orangeRed" })
+            $("h1").css({ color: "white" })
+            // mouseleave event
+            $(".box").mouseleave(function () {
+                $("body").css({ backgroundColor: "black" })
+                $("h1").css({ color: "blue" })
+            })
+            //    mousedown
+            $(".box").mousedown(function () {
+                $("h1").css({ color: "aqua" })
+            })
+            $(".box").mouseup(function(){
+                $("h1").css({color:"black"})
+            })
+
+        });
+
+
+    </script>
+</body>
+
+</html>
